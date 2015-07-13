@@ -10,8 +10,8 @@ myLast (_:xs) = myLast xs
 myButLast :: [a] -> a
 myButLast []     = error "error"
 myButLast (x:xs) = if length xs == 1
-									 then x
-									 else myButLast xs
+                   then x
+                   else myButLast xs
 
 -- | Problem 3
 elementAt :: [a] -> Int -> a
@@ -61,11 +61,9 @@ pack = init . go
 encode :: Eq a => [a] -> [(Int, a)]
 encode [] = []
 encode xs = zip lens elems
-	where
-	 lst   = pack xs
-	 elems = map head lst
-	 lens  = map length lst
-
+	where lst   = pack xs
+	      elems = map head lst
+	      lens  = map length lst
 
 
 
