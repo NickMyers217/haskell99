@@ -4,7 +4,8 @@ import OneToTen(encode)
 
 -- | Problem 11
 data Encode a = Multiple Int a
-							| Single a deriving (Show)
+              | Single a deriving (Show)
+
 
 encodeModified :: Eq a => [a] -> [Encode a]
 encodeModified = map go . encode
