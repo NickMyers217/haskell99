@@ -4,7 +4,7 @@ import OneToTen(encode)
 
 -- | Problem 11
 data Encode a = Multiple Int a
-              | Single a deriving (Show)
+			  | Single a deriving (Show)
 
 
 encodeModified :: Eq a => [a] -> [Encode a]
@@ -17,5 +17,7 @@ decodeModified = concatMap go
 	where go (Single a)     = [a]
 	      go (Multiple c a) = replicate c a
 
--- | Problem 13
-
+testFunc :: a -> a
+testFun n = square
+	where lel = n*n
+	      square = lel
